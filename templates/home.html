@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Blog Post -->
+    {% for pg in object_list %}
+        <div class="card mb-4">
+
+            <div class="card-footer text-muted">
+            Posted on {{ pg.created }} by
+            <a href="#">{{ pg.name }}</a>
+          </div>
+
+
+
+          <div class="card-body">
+              <a href="{% url 'pgs:pg_detail' pg.slug %}"><h4 class="card-title">{{ pg.name }}</h4></a>
+            <p class="card-text">{{ pg.desc }}</p>
+            <a href="{% url 'pgs:pg_detail' pg.slug %}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+
+        </div>
+    {% endfor %}
+
+{% endblock %}

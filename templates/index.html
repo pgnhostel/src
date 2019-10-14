@@ -1,0 +1,22 @@
+{% extends 'base_index.html' %}
+
+{% block content %}
+
+<div class="jumbotron text-center p-3 mb-2 bg-primary text-white">
+    <h1>pgnhostel.com</h1>
+  <p>Stop Searching.....  Start Exploring.....</p>
+  <br>
+  <br>
+  <form>
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="Enter Area name... eg: Hennur, Madiwala, BTM Layout, etc..." required>
+      <div class="input-group-btn">
+        <a href="{% url 'pgs:home' %}"><button type="button" class="btn btn-danger">Click here to explore</button></a>
+      </div>
+    </div>
+  </form>
+    <br><br><p>Exclusive portal to search PG's in Bangalore...</p>
+</div>
+
+{% endblock %}
+

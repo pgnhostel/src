@@ -1,0 +1,58 @@
+{% extends 'base_index.html' %}
+{% block title %} {{ object.name }} {% endblock %}
+{% block content %}
+<br/>
+<br/>
+    <div class="row">
+        &nbsp; &nbsp;
+        <div class="card mb-4">
+            <img src="{{object.image.url}}" alt="{{ pg.name }}" width="264" height="264">
+        </div>
+        &nbsp; &nbsp;
+        <div class="card mb-4">
+            <img src="{{object.image1.url}}" alt="{{ pg.name }}" width="264" height="264">
+        </div>
+        &nbsp; &nbsp;
+        <div class="card mb-4">
+            <img src="{{object.image2.url}}" alt="{{ pg.name }}" width="264" height="264">
+        </div>
+        &nbsp; &nbsp;
+        <div class="card mb-4">
+            <img src="{{object.image3.url}}" alt="{{ pg.name }}" width="264" height="264">
+        </div>
+        &nbsp; &nbsp;
+    </div>
+
+    <div class="card my-4">
+    <h4><strong>{{ object.name }}</strong></h4>
+    </div> {{ object.desc }}
+
+    <div class="card my-4">
+    <h6> <strong>Amenities : </strong> </h6>
+    </div> {{ object.amen }}
+
+    <div class="card my-4">
+    <h6><strong>Address : </strong></h6>
+    </div> {{ object.address }}
+
+    <div class="card my-4">
+    <h6><strong>Area: </strong></h6>
+    </div>   {{ object.area }}
+
+    <div class="card my-4">
+    <h6><strong>Contact: </strong> </h6>
+    </div> {{ object.ph_no }}
+
+    <div class="card my-4">
+    <h6><strong> NOTE: </strong> This is a {{ object.category }} Paying Guest accommodation. Do inform the owner,
+        you found this PG from pgnhostel.com </h6>
+    </div>
+
+    <strong>Disclaimer: </strong><p>Property Ads displayed are verified and we do not indulge in any
+        kind of dispute that arises between PG owners and PG tenants.</p>
+    <p> PG owners place your property add <strong><a href="{% url 'personal:contact' %}"> FREE </a></strong> and start getting enquires.
+        We do not have any representatives/executives to deal on our behalf.</p>
+
+<br/>
+<br/>
+{% endblock content %}

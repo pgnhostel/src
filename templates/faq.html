@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} pgnhostel FAQ {% endblock %}
+{% block content %}
+  <!-- Blog Post -->
+    {% for faq in object_list %}
+        <div class="card mb-4">
+
+           <div class="card-body">
+              <h4 class="card-title">{{ faq.question }}</h4>
+            <p class="card-text">{{ faq.answer }}</p>
+
+          </div>
+
+        </div>
+    {% endfor %}
+
+{% endblock %}
